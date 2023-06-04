@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useSearchParams } from 'react-router-dom';
+import { Link, Outlet, useSearchParams } from 'react-router-dom';
 import { fetchEventsByName } from 'servises/events-api';
 
 const SearchPage = () => {
@@ -35,6 +35,7 @@ const SearchPage = () => {
           </li>
         ))}
       </ul>
+      <Outlet />
     </>
   );
 };
